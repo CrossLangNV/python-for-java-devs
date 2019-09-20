@@ -1,10 +1,11 @@
 import logging
 
-def say():
+def say(n):
   logging.basicConfig(level=logging.DEBUG)
-  logging.info("Hello world")
+  for i in range(n):
+    logging.info(str(i) + ": Hello world")
 
-say()
+say(1)
 
 if __name__=="__main__":
-  say()
+  say(3)
