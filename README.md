@@ -10,6 +10,9 @@ Identity added: /home/Joachim/.ssh/id_rsa (/Users/Joachim/.ssh/id_rsa)
 $ ssh -A joachim@thorne
 ```
 
+# Windows
+Alternatively, you can just use your github login and password
+
 # Python versions/virtualenv/conda
 ```console
 $ virtualenv --python=/usr/bin/python2.7 p27
@@ -24,6 +27,7 @@ $ source p27/bin/activate
 ```console
 $ git config --global user.email "you@example.com"
 $ git config --global user.name "Your Name"
+$ git clone git@github.com:CrossLangNV/python-for-java-devs.git
 ```
 
 
