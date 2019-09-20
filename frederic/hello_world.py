@@ -1,15 +1,10 @@
 import logging
 
-def say_hello():
+def say():
   logging.basicConfig(level=logging.DEBUG)
   logging.info("Hello world")
 
-say_hello()
+say()
 
-# Single line comment
-'''
-In java we have /**
-                **/
-'''
 if __name__=="__main__":
-  say_hello()
+  say()
