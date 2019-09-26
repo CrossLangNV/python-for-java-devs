@@ -64,6 +64,6 @@ artifact-name
 +--target
    +--artifact-name-version.jar
 ```
-External libraries are declared in the ```pom.xml``` file, and added during build time. There is no need to install them first, at least not when you use a correctly configured ```pom.xml``` and repository (e.g. ```nexus```).
+External libraries are declared in the ```pom.xml``` file, and added during build time. There is no need to install them first, if you use a correctly configured ```pom.xml``` and [maven repository](https://www.sonatype.com/product-nexus-repository).
 
 
