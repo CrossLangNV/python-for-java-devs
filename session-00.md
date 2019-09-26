@@ -1,4 +1,4 @@
-# Getting acquainted with the Pythin development environment
+# Getting acquainted with the Python development environment
 ## Cloning the repository and setting up git and Python
 ```console
 $ git config --global user.email "you@example.com"
