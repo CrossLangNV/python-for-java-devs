@@ -45,6 +45,25 @@ $ source p27/bin/activate
 You will notice that your shell prompt changes to indicate that you are working from within a virtual env. Whenever you install a new package into your activated virtual env (using the ```pip install```) command, the changes will only affect your own environment.
 
 # Basic code flow
-
+In Java (assuming that you build your code with ```mvn build```) your project is normally organized as follows:
+```
+artifact-name  
++--pom.xml  
++--src/main/java
+   +--com.crosslang.projectname  
+      +--HelloWorld.java  
++--src/main/resources
+   +--com.crosslang.projectname
+      +--someresource.txt
++--src/test/java
+   +--com.crosslang.projectname
+      +--HelloWorldTest.java
++--src/test/resources  
+   +--com.crosslang.projectname
+      +--sometestresource.txt
++--target
+   +--artifact-name-version.jar
+```
+External libraries are declared in the ```pom.xml``` file, and added during build time. There is no need to install them first, at least not when you use a correctly configured ```pom.xml``` and repository (e.g. ```nexus```).
 
 
