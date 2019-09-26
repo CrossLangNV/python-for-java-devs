@@ -1,7 +1,4 @@
-# python-for-java-devs
-Python for Java developers
-
-# Getting started with git and Python
+# Getting acquainted with the Pythin development environment
 ## Cloning the repository and setting up git and Python
 ```console
 $ git config --global user.email "you@example.com"
