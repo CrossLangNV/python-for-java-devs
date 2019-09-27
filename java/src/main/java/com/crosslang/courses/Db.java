@@ -24,9 +24,9 @@ public class Db {
 	public void printSentenceNGrams() {
 		for (Sentence sentence : sentences) {
 
-			log.info(sentence.toString());
+//			log.info(sentence.toString());
 			for (NGram ngram : sentence.getNGrams()) {
-				log.info(Integer.toString(ngram.getOrder()) + ngram.toString());
+//				log.info(Integer.toString(ngram.getOrder()) + ngram.toString());
 			}
 		}
 	}
