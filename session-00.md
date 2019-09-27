@@ -82,6 +82,48 @@ In Python, code is organized with a focus on modules, i.e. python files (ending 
 ```
 hello.py
 ```
+containing
+```python
+def get_hello():
+    return 'Hello'
 
+class Hello():
 
+    def say_hello(self):
+        print('Hello')
+```
+and the file 
+```
+world.py
+```
+containing
+```python
+import hello
 
+if __name__=='__main__':
+    print hello.get_hello()
+   #  h = Hello() will not work unless you import the HelloSayer class explicitly
+    from hello import Hello
+    h = Hello()
+```
+With this layout, you can ```import hello`` and access all methods described in it. For example
+```
+import hello
+print hello.get_hello()
+```
+As indicated in the ```world.py``` file, however, you will not be able to access the ```Hello```
+class with this ```import``` statement. For that to work, you must import the ```Hello``` class explicitly, as in 
+```python
+from hello import Hello
+h = Hello()
+```
+Image now that you organise things the *Java way*. In that case you would have to write for each import statement something like this:
+```python
+from hello import Hello
+from world import World
+from file_n import FileN
+# and so on
+```
+Hence, it is better to do it *the Python way* and think of python files as modules containing multiple methods and classes.
+
+## Code visibility
