@@ -127,3 +127,24 @@ from file_n import FileN
 Hence, it is better to do it *the Python way* and think of python files as modules containing multiple methods and classes.
 
 ## Code visibility
+You cannot enforce Python code to be invisible for downstream users. In Java this is possible through three (actually four - see graph below) levels of encapsulation (```public, protected, and private```). ```public``` members are visible across package borders, ```protected``` members can be accessed within the same package and from extending classes. ```private``` members are hidden from all other classes. 
+```
+______________________________________________________________  
+|           │ Class │ Package │ Subclass │ Subclass │ World  |  
+|           │       │         │(same pkg)│(diff pkg)│        |  
+|───────────┼───────┼─────────┼──────────┼──────────┼────────|  
+|public     │   +   │    +    │    +     │     +    │   +    |   
+|───────────┼───────┼─────────┼──────────┼──────────┼────────|  
+|protected  │   +   │    +    │    +     │     +    │        |   
+|───────────┼───────┼─────────┼──────────┼──────────┼────────|  
+|no modifier│   +   │    +    │    +     │          │        |   
+|───────────┼───────┼─────────┼──────────┼──────────┼────────|  
+|private    │   +   │         │          │          │        |  
+|___________|_______|_________|__________|__________|________|  
+ + : accessible         blank : not accessible
+
+ ```
+ 
+ (copied from https://stackoverflow.com/questions/215497/what-is-the-difference-between-public-protected-package-private-and-private-in)
+ 
+In Python, there is a convention to prefix private instance variables and methods with *one* underscore.
