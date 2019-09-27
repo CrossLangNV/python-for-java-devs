@@ -22,7 +22,7 @@ $ git clone https://github.com/CrossLangNV/python-for-java-devs.git
 or you can download git for Windows: https://git-scm.com/download/win
 
 ## Python versions/virtualenv/conda
-Since there is still a large code base in Python 2.7, and since this version has its specific issues, we will be starting with Python 2.7. The easiest way to ensure that you use a specific set of ibraries and a specific version of Python, other than the one that was set up by your system administrator, is to install conda (https://docs.conda.io/en/latest/) or virtualenv (https://virtualenv.pypa.io/en/latest/), create a new virtual env and activate it.
+Since there is still a large code base in Python 2.7, and since this version has its specific issues, we will be starting with Python 2.7. To ensure that you use a specific set of libraries and a specific version of Python, other than the one that was set up by your system administrator, install conda (https://docs.conda.io/en/latest/) or virtualenv (https://virtualenv.pypa.io/en/latest/), create a new virtual env, and activate it.
 
 Virtualenv example:
 ```console
@@ -41,7 +41,8 @@ $ source p27/bin/activate
 
 You will notice that your shell prompt changes to indicate that you are working from within a virtual env. Whenever you install a new package into your activated virtual env (using the ```pip install```) command, the changes will only affect your own environment.
 
-# Basic code flow
+# Basic operations
+## Including external libraries
 In Java (assuming that you build your code with ```mvn build```) your project is normally organized as follows:
 ```
 artifact-name  
@@ -62,5 +63,25 @@ artifact-name
    +--artifact-name-version.jar
 ```
 External libraries are declared in the ```pom.xml``` file, and added during build time. There is no need to install them first, if you use a correctly configured ```pom.xml``` and [maven repository](https://www.sonatype.com/product-nexus-repository).
+
+For python, you must install all packages separately. There is no such things as a maven build system.
+So, suppose that we need something like [pexpect](https://pexpect.readthedocs.io/en/stable/), then before we can do:
+```python
+import pexpect
+```
+we must have the pexpect library installed, using:
+```console
+$ pip install pexpect
+```
+This is not ideal when you distribute your software. It would force your users to execute your code and install new requirements for each error they encounter. You can make things is easier by listing all your required libraries in a ```requirements.txt```file and have them installed  using pip.
+```console
+$ pip install -r requirements.txt
+```
+## Code organisation
+In Python, code is organized with a focus on modules, i.e. python files (ending in ```.py```) that may contain multiple classes. In Java, imports are class-focused, and each class has its own file (unless you are using nested classes). This has some repercusisons if you want to organize your code in Python using the *Java way*. Suppose you have the following files:
+```
+hello.py
+```
+
 
 
