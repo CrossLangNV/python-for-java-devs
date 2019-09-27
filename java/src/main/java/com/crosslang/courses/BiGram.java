@@ -20,6 +20,6 @@ public class BiGram implements NGram {
 	
 	@Override
 	public String toString() {
-		return "bigram" + this.text ;
+		return "bigram: " + this.text ;
 	}
 }

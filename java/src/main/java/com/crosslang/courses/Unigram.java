@@ -20,6 +20,6 @@ public class Unigram implements NGram {
 	
 	@Override
 	public String toString() {
-		return "unigram" + this.text ;
+		return "unigram: " + this.text ;
 	}
 }
