@@ -30,6 +30,14 @@ class NGram(object):
     def text(self):
         pass
 
+    def __eq__(self, other):
+        if isinstance(other, NGram):
+            return self.text == other.text
+        return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
 
 class Unigram(NGram):
 
@@ -61,6 +69,10 @@ class Bigram(NGram):
     @property
     def text(self):
         return self.__text
+
+    @text.setter
+    def text(self, text):
+        self.__text = text
 
     def __repr__(self):
         return "Bigram (%d, %s)" % (self.get_order(), self.__text)
