@@ -63,6 +63,11 @@ class Bigram(NGram):
     def __init__(self, text):
         self.__text = text
 
+    @classmethod
+    def from_list(cls, l):
+        text = ' '.join(l)
+        return cls(text)
+
     def get_order(self):
         return 2
 
