@@ -11,7 +11,7 @@ When using git on a linux machine with the CLI, you must authenticate with the p
 associated with the public key you use on git (see https://github.com/settings/keys to add a key). 
 To ensure that your private key remains safe on your own local machine, you need to cache 
 your identity when connecting to a development server. You can achieve this by 
-using*ssh-add* and*ssh -A*
+using *ssh-add* and *ssh -A*
 ```console
 $ ssh-add
 Identity added: /home/someuser/.ssh/id_rsa (/Users/someuser/.ssh/id_rsa)
@@ -98,7 +98,7 @@ $ pip install -r requirements.txt
 In Python, code is organized with a focus on modules, i.e. python files (ending in ```.py```) 
 that contain multiple classes. In Java, imports are class-focused, and each class has its own 
 file (unless you are using nested classes). This has some repercusisons if you want to organize 
-your code in Python using the*Java way*. Suppose you have the following files:
+your code in Python using the *Java way*. Suppose you have the following files:
 ```python
 # hello.py  
 
@@ -134,7 +134,7 @@ explicitly, as in
 from hello import Hello
 h = Hello()
 ```
-Image now that you organise things the*Java way*. In that case you would have to write for each 
+Image now that you organise things the *Java way*. In that case you would have to write for each 
 import statement something like this:
 ```python
 from hello import Hello
@@ -145,8 +145,8 @@ from file_n import FileN
 Hence, it is better to do it *the Python way* and think of python files as modules containing 
 multiple methods and classes.
 
-## Importing modules hell (as perceived from the*Java* perspective)
-In Java, things are quite simple (at least when using*maven*). You either pull in a dependency 
+## Importing modules hell (as perceived from the *Java* perspective)
+In Java, things are quite simple (at least when using *maven*). You either pull in a dependency 
 using your ```pom.xml``` or you don't, and you get a compile error because maven cannot find 
 dependencies during import.  
 
@@ -164,7 +164,7 @@ https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-jar-wi
 The point of all this is the following: although tools such as maven take away the burden of 
 defining your classpath, Java still needs it, to ensure that your own code can call external code.
 
-In Python, this is no different, except, there is no such thing as maven, so you must*know* how
+In Python, this is no different, except, there is no such thing as maven, so you must *know* how
 and from which paths Python modules are loaded. A nice overview can be found here:
 https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html
 The following is copied from this site:
