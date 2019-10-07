@@ -1,8 +1,6 @@
 from abc import ABC, abstractmethod
 
 class NGram(ABC):
-    def __init__(self):
-        super().__init__()
     @abstractmethod
     def get_order(self):
         pass
@@ -12,26 +10,26 @@ class NGram(ABC):
 
 class Unigram(NGram):
     def __init__(self, text):
-        super().__init__()
         self.__text = text
     def get_order(self):
-        super().get_order()
         return 1
     def get_text(self):
         return self.__text
     def __str__(self):
         return "unigram " + self.__text
+    def __repr__(self):
+        return "unigram " + self.__text
 
 class BiGram(NGram):
     def __init__(self, text):
-        super().__init__()
         self.__text = text
     def get_order(self):
-        super().get_order()
         return 2
     def get_text(self):
         return self.__text
     def __str__(self):
+        return "bigram " + self.__text
+    def __repr__(self):
         return "bigram " + self.__text
 
 class Sentence():
@@ -65,7 +63,7 @@ class DB():
         for sentence in self.__sentences:
             print(sentence)
             for n_gram in sentence.get_n_grams():
-                print(n_gram)
+                print(str(n_gram.get_order()) + ": " + str(n_gram))
 
 x = Unigram("rain")
 print(x.get_order())
