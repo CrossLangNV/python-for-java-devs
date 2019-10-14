@@ -1,0 +1,20 @@
+Opdracht OOP basismethodes
+==========================
+
+Vertrek vanuit https://github.com/CrossLangNV/python-for-java-devs/blob/master/frederic/OOP/printer_exercise/printer.py
+
+1) Voeg een repr en een str toe aan elk van de twee concrete printerklasses.
+
+2) Zoek de constructor van de YAML printer. Bewerk het zodanig dat het ook mogelijk is om het op de volgende manier aan te roepen:
+mijn_yaml_printer = YamlPrinter()
+In dit geval willen we dat _items een lege dictionary is.
+
+3) Zoek de constructor van de CSV printer. Bewerk het zodanig dat het ook mogelijk is om het op de volgende manier aan te roepen:
+mijn_yaml_printer = YamlPrinter()
+In dit geval willen we dat _items een dictionary is met de volgende waarden erin:
+color         blue
+amount        3
+enabled       True
+
+4) Voeg bij beide printers een getter en een setter toe voor _items.
+
