@@ -2,6 +2,7 @@ Opdracht OOP basismethodes
 ==========================
 
 Vertrek vanuit https://github.com/CrossLangNV/python-for-java-devs/blob/master/frederic/OOP/printer_exercise/printer.py
+Maak hier een kopie van in je eigen map, en werk hierop verder.
 
 1) Voeg een repr en een str toe aan elk van de twee concrete printerklasses.
 
