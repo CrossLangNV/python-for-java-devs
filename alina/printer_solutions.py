@@ -39,7 +39,7 @@ class YamlPrinter(Printer):
 
 
 class CSVPrinter(Printer):
-    def __init__(self, items="color : blue, amount : 3, enabled : True"):
+    def __init__(self, items={'color': 'blue', 'amount': 3, 'enabled': True}):
         # assume this is a dict
         self._items = items
 
@@ -55,7 +55,7 @@ class CSVPrinter(Printer):
 
     def __str__(self):
         string_repr = str()
-        for x in self.__items:
+        for x in self._items:
             string_repr.join(x)
         return "I am a dictionary of CSVPrinter items" + string_repr
 
