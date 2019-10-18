@@ -1,0 +1,1 @@
+# Task scheduling with Django, Celery and Flower
