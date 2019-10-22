@@ -73,8 +73,7 @@ class Team:
         return member in self.__members
 
     def __iter__(self):
-        for member in members:
-            print(member)
+        return iter(self.__members)
 
 
 justice_league_fav = Team(["batman", "wonder woman", "flash"])
