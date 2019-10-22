@@ -47,6 +47,8 @@ s2 = SomeExample.from_list(['a', 'b']) # instantiation by classmethod
 
 ## Static methods
 
+This section is yet to be written.
+
 ## Interfaces in Python
 
 *For Python 3*, from: http://masnun.rocks/2017/04/15/interfaces-in-python-protocols-and-abcs/
