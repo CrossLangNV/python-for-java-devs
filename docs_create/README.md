@@ -1,32 +1,43 @@
-`
-sphinx-quickstart
-`
+# Automatic documenetation with Sphinx
 
-#
+## Initialisation
 
-Adjust conf.py (uncomment + change path)
+Initiate Sphinx basic files:
+
+    $ sphinx-quickstart
+    
+
+## Configuration
+
+Adjust `conf.py`: 
+* uncomment 
+* change path.
+
 
     import os
     import sys
     sys.path.insert(0, os.path.abspath('..'))
     
-and add to extensions:
+* add extensions:
+
 
     extensions = [
     'sphinx.ext.autodoc'
     ]
     
-A more modern look: (after installing it: pip install sphinx_rtd_theme)
+* A more modern look: (after installing it: pip install sphinx_rtd_theme)
+
 
     html_theme = 'sphinx_rtd_theme'    
    
    
-Also include constructor (__init__) 
+* Also include constructors (__init__) docstrings
 https://stackoverflow.com/a/9772922/6921921
+
 
     autoclass_content = 'both'
     
-#
+# Including modules
     
 Add modules to index.rst
 
@@ -36,7 +47,7 @@ Add modules to index.rst
        :caption: Contents:
        
        modules
-    
+          
 It makes a modules.rst with all the module paths.
 
 ## ! WARNING
@@ -44,7 +55,7 @@ It makes a modules.rst with all the module paths.
 if there are new modules added, you might have to manually adjust modules.rst!
 #  
 `
-sphinx-apidoc -o . ..
+sphinx-apidoc -o source/ ..
 `
 
 `
@@ -56,3 +67,7 @@ make html
 `
 make clean
 `
+
+# Github website
+
+When uploading to github, to use as webpage, move the **./html** folder to **/docs**.
